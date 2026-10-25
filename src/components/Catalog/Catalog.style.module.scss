@@ -1,0 +1,19 @@
+.catalog {
+  max-width: 1320px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 28px;
+    margin-top: 49px;
+  }
+}

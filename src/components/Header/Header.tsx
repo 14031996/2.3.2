@@ -13,11 +13,9 @@ const Header = () => {
   }
 
   let totalQuantity = 0;
-  let totalPrice = 0;
 
   for (const product of basket.products) {
     totalQuantity += product.quantity;
-    totalPrice += product.price * product.quantity;
   }
 
   return (
@@ -28,8 +26,6 @@ const Header = () => {
       </div>
 
       <div className={Style["header-cart"]}>
-        <span className={Style["header-total"]}>$ {totalPrice}</span>
-
         <Popover
           width={444}
           position="bottom-end"
@@ -39,11 +35,19 @@ const Header = () => {
         >
           <Popover.Target>
             <Button
-              color="#54b46a"
+              className={Style["header-button"]}
+              color="#3b944e"
               radius="md"
+              leftSection={
+                totalQuantity > 0 ? (
+                  <span className={Style["header-quantity"]}>
+                    {totalQuantity}
+                  </span>
+                ) : undefined
+              }
               rightSection={<IconShoppingCart size={20} />}
             >
-              Cart ({totalQuantity})
+              Cart
             </Button>
           </Popover.Target>
 

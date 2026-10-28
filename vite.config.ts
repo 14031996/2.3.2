@@ -3,6 +3,7 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/2.3.2/",
   test: {
     globals: true,
     environment: "jsdom",

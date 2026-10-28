@@ -5,17 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 59px;
-  padding: 0 20px;
+  height: 64px;
+  padding: 0 32px;
   background-color: white;
 
   &-logo {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-left: 12px;
-    border-radius: 31px;
-    background-color: #f7f7f7;
     font-size: 22px;
     font-weight: 600;
 
@@ -32,11 +29,25 @@
   &-cart {
     display: flex;
     align-items: center;
-    gap: 16px;
   }
 
-  &-total {
+  &-button {
+    width: 168px;
+    height: 44px;
     font-size: 16px;
+    font-weight: 500;
+  }
+
+  &-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: #3b944e;
+    font-size: 12px;
     font-weight: 600;
   }
 }
